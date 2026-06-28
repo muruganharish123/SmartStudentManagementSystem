@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <div class="sidebar">
+        <h2>🎓 SMS</h2>
+        <a href="/dashboard">🏠 Dashboard</a>
+        <a href="/students">👨‍🎓 Students</a>
+        <a href="/reports">📊 Reports</a>
+        <a href="/settings">⚙ Settings</a>
+        <a href="/">🚪 Logout</a>
+    </div>
+
+    <div class="main">
+
+        <h1>Welcome Admin</h1>
+        <p class="subtitle">Student Management System Dashboard</p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <p th:text="${totalStudents}">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Departments</h3>
+                <p>IT / CSE / ECE</p>
+            </div>
+
+            <div class="card">
+                <h3>System Status</h3>
+                <p>Active</p>
+            </div>
+
+        </div>
+
+        <div class="info-box">
+            <h2>Quick Actions</h2>
+
+            <div class="quick-actions">
+                <a href="/students/add" class="add-btn">+ Add Student</a>
+                <a href="/students" class="add-btn">View Students</a>
+                <a href="/reports" class="add-btn">View Reports</a>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h2>Project Features</h2>
+            <p>✔ Spring Boot Backend</p>
+            <p>✔ Spring MVC Controller</p>
+            <p>✔ Spring Data JPA</p>
+            <p>✔ MySQL Database</p>
+            <p>✔ Thymeleaf Frontend</p>
+            <p>✔ Student CRUD Operations</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
